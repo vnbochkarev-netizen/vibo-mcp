@@ -1,0 +1,41 @@
+{
+  "name": "@vibo-dev/vibo-mcp",
+  "version": "0.2.2",
+  "description": "ViBo MCP server — memory for AI agents: persistent memory (L1/L2/L3), web-search savings, thread memory. Works with Claude, Cursor, OpenClaw and any MCP client.",
+  "license": "MIT",
+  "author": "ViBo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vnbochkarev-netizen/ViBo-memory"
+  },
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "vibo-mcp": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "memory",
+    "ai",
+    "agent",
+    "llm",
+    "persistent-memory",
+    "claude",
+    "cursor"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.10.0",
+    "typescript": "^5.0.0"
+  }
+}
