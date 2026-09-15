@@ -70,3 +70,7 @@ Agent: "What does client Anna prefer?"
   agent memory (MIT).
 * [**ViBo-memory**](https://github.com/vnbochkarev-netizen/ViBo-memory) — persistent agent memory
   with L1/L2/L3 encryption.
+
+## Integrations
+
+- **cc-connect** (bridge agent CLIs to messengers): [docs/cc-connect.md](docs/cc-connect.md)
