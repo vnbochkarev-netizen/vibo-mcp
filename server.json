@@ -1,27 +1,35 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.vnbochkarev-netizen/vibo-mcp",
-  "description": "Persistent memory for AI agents: L1/L2/L3, web compression, threads.",
+  "title": "ViBo Memory",
+  "description": "Local-first memory for AI agents: facts stored on your machine with hash-chain provenance, verified recall that catches wrong numbers, secret levels and thread memory. No account or API key required.",
   "repository": {
     "url": "https://github.com/vnbochkarev-netizen/vibo-mcp",
     "source": "github"
   },
-  "version": "0.2.6",
+  "version": "0.3.0",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "@vibo-dev/vibo-mcp",
-      "version": "0.2.6",
+      "version": "0.3.0",
       "transport": {
         "type": "stdio"
       },
       "environmentVariables": [
         {
-          "description": "Your ViBo license key (VIBO-...). Get a free trial: https://wwwvibo.com",
-          "isRequired": true,
+          "description": "Optional. Local memory works without it; set only to mirror facts to a ViBo cloud account.",
+          "isRequired": false,
           "format": "string",
           "isSecret": true,
           "name": "VIBO_API_KEY"
+        },
+        {
+          "description": "Optional. Storage location for the local memory file (default: ~/.vibo/mcp/memory.json).",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": false,
+          "name": "VIBO_MEM_FILE"
         }
       ]
     }
